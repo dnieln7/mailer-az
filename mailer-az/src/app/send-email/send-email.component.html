@@ -1,0 +1,48 @@
+<div class="p-3 d-flex flex-column align-items-center h-100">
+  <div class="position-absolute align-self-start">
+    <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+  </div>
+
+  <div class="text-center my-4">
+    <p class="title">MailerAz</p>
+    <div class="img-container">
+      <img class="h-100" src="../../assets/images/logo.png" alt="logo">
+    </div>
+  </div>
+
+  <form class="form-container flex-grow-1">
+    <div class="form-row">
+      <div class="col-12 mb-3">
+        <label class="label" for="email">Send to</label>
+        <input [(ngModel)]="email" [ngClass]="validEmail ? 'is-valid' :'is-invalid'" (change)="validateEmail()"
+               type="email" class="form-control" id="email" name="email" placeholder="someone@example.com" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please provide an email.
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-12 mb-4">
+        <label class="label" for="message">Message</label>
+        <textarea [(ngModel)]="message" [ngClass]="message.length === 0 ? 'is-invalid' : 'is-valid'"
+                  class="form-control" id="message" name="message" rows="4" placeholder="Hi, how are you"></textarea>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please type a message.
+        </div>
+      </div>
+    </div>
+    <button (click)="sendEmail()" type="submit" class="btn btn-primary btn-block mb-4">SEND</button>
+  </form>
+
+  <div class="d-flex flex-row justify-content-center">
+    <span>Iconos diseñados por <a href="https://www.flaticon.es/autores/dinosoftlabs"
+                                  title="DinosoftLabs">DinosoftLabs</a></span>
+    <span class="ml-1">From <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></span>
+  </div>
+</div>

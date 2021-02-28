@@ -1,0 +1,8 @@
+To run az commands:
+
+Set-ExecutionPolicy RemoteSigned 
+
+Restricted – No scripts can be run.
+AllSigned – Only scripts signed by a trusted publisher can be run.
+RemoteSigned – Downloaded scripts must be signed by a trusted publisher.
+Unrestricted – All Windows PowerShell scripts can be run.

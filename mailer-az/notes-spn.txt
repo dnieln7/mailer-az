@@ -1,0 +1,20 @@
+-----------------------------------------------------------------------------------------------
+chmod +x create-spn.sh
+./create-spn.sh
+
+SPN ID: spn_id
+SPN password: spn_pass
+
+kubectl create secret docker-registry acr-secret \
+    --docker-server=name.azurecr.io \
+    --docker-username=spn_id \
+    --docker-password=spn_pass
+----------------------------------------------------------------------------------------------
+kubectl create secret docker-registry <secret-name> \
+    --namespace <namespace> \
+    --docker-server=<container-registry-name>.azurecr.io \
+    --docker-username=<service-principal-ID> \
+    --docker-password=<service-principal-password>
+
+https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes
+----------------------------------------------------------------------------------------------

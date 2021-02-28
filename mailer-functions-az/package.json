@@ -1,0 +1,18 @@
+{
+  "name": "mailer-functions-az",
+  "version": "1.0.0",
+  "description": "Function to send an email",
+  "scripts": {
+    "start-function": "func start",
+    "new-function": "func new",
+    "get-dependencies": "npm install",
+    "publish-function": "func azure functionapp publish mailingform",
+    "test": "echo \"No tests yet...\""
+  },
+  "author": "dnieln7",
+  "dependencies": {
+    "nodemailer": "6.4.18",
+    "dotenv": "8.2.0",
+    "pg": "8.5.1"
+  }
+}
